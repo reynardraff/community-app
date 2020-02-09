@@ -172,10 +172,10 @@ module.exports = {
     CONTENTFUL: {
       MANAGEMENT_TOKEN: '', // Personal Access Token to use the Content Management API
       default: { // Human-readable name of space
-        SPACE_ID: '',
+        SPACE_ID: 'b5f1djy59z3a',
         master: { // Name of an environment
-          CDN_API_KEY: '',
-          PREVIEW_API_KEY: '',
+          CDN_API_KEY: '9509cc6b93e546e7cb1e6b8b9fe494da6f398206a7658eebed1267d07c1f5cf7',
+          PREVIEW_API_KEY: 'ca4d1d7000d03a6513ba7d2e97b63f13e0dc718af44d756cbd390a174fbe448d',
         },
       },
       /* Space for expert communities. */

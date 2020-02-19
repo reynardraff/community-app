@@ -7,6 +7,21 @@ import Logo from 'assets/images/tc-logo.svg';
 let TopNavRef;
 let LoginNavRef;
 
+function specifyNotificationState(notifications) {
+  const newNotification = notifications.some(notification => !notification.seen);
+  const unreadNotification = notifications.some(notification => !notification.read);
+
+  if (newNotification) {
+    return 'new';
+  }
+
+  if (unreadNotification) {
+    return 'seen';
+  }
+
+  return 'none';
+}
+
 try {
   // eslint-disable-next-line global-require
   const { TopNav, LoginNav } = require('navigation-component');

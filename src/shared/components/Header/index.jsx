@@ -62,7 +62,7 @@ const Header = ({ profile }) => {
               switchText={config.ACCOUNT_MENU_SWITCH_TEXT}
               onSwitch={handleSwitchMenu}
               onMenuOpen={handleCloseOpenMore}
-              showNotification={true}
+              showNotification={false}
               profile={normalizedProfile}
               authURLs={config.HEADER_AUTH_URLS}
             />

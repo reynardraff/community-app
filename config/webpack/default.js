@@ -8,6 +8,9 @@ let publicPath = process.env.CDN_URL || '/api/cdn/public';
 publicPath += '/static-assets';
 
 module.exports = {
+  optimization: {
+    minimize: false
+  },
   entry: {
     'loading-indicator-animation': './src/client/loading-indicator-animation',
   },

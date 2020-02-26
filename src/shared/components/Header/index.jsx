@@ -22,6 +22,21 @@ function specifyNotificationState(notifications) {
   return 'none';
 }
 
+
+const dummyNotif = {
+  notifications: [
+    {
+      id: '1',
+      category: 'Tes Notif 01',
+      timestamp: new Date().setDate(13),
+      content: 'Notifications testing',
+      completed: false,
+    },    
+  ],
+  notificationState: 'new',
+};
+
+
 try {
   // eslint-disable-next-line global-require
   const { TopNav, LoginNav } = require('navigation-component');
@@ -31,7 +46,7 @@ try {
   // window is undefined
 }
 
-const Header = ({ profile }) => {
+const Header = ({ profile }) => {  
   const [activeLevel1Id, setActiveLevel1Id] = useState();
   const [path, setPath] = useState();
   const [openMore, setOpenMore] = useState(true);
@@ -71,8 +86,10 @@ const Header = ({ profile }) => {
           rightMenu={(
             <LoginNavRef
               loggedIn={!_.isEmpty(profile)}
-              notificationButtonState="none"
-              notifications={[]}
+              // notificationButtonState="none"
+              // notifications={[]}
+              notificationButtonState={'new'}
+              notifications={dummyNotif.notifications}
               accountMenu={config.ACCOUNT_MENU}
               switchText={config.ACCOUNT_MENU_SWITCH_TEXT}
               onSwitch={handleSwitchMenu}
